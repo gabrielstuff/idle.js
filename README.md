@@ -7,3 +7,15 @@ Get bus
 [![Test Coverage](https://codeclimate.com/github/gabrielstuff/idle-js/badges/coverage.svg)](https://codeclimate.com/github/gabrielstuff/idle-js)
 [![Dependency Status](https://david-dm.org/gabrielstuff/idle-js.svg)](https://david-dm.org/gabrielstuff/idle-js)
 [![devDependency Status](https://david-dm.org/gabrielstuff/idle-js/dev-status.svg)](https://david-dm.org/gabrielstuff/idle-js#info=devDependencies)
+
+# Test
+
+
+```
+console.log('hello')
+new idleJs({
+  onIdle: function (){
+    console.log('idle !');
+  }
+}).start();
+```
