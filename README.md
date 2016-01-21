@@ -8,9 +8,9 @@ Get bus
 [![Dependency Status](https://david-dm.org/gabrielstuff/idle-js.svg)](https://david-dm.org/gabrielstuff/idle-js)
 [![devDependency Status](https://david-dm.org/gabrielstuff/idle-js/dev-status.svg)](https://david-dm.org/gabrielstuff/idle-js#info=devDependencies)
 
+
+
 # Test
-
-
 ```
 console.log('hello')
 new idleJs({
