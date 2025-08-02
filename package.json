@@ -2,14 +2,24 @@
   "name": "idle-js",
   "version": "0.0.1",
   "description": "Get bus",
-  "main": "dist/idle-js.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
   "scripts": {
-    "test": "gulp",
-    "lint": "gulp lint",
-    "test-browser": "gulp test-browser",
-    "watch": "gulp watch",
-    "build": "gulp build",
-    "coverage": "gulp coverage"
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui"
   },
   "repository": {
     "type": "git",
@@ -23,6 +33,10 @@
   },
   "homepage": "https://github.com/gabrielstuff/idle-js",
   "devDependencies": {
+    "@types/node": "^24.1.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@vitest/ui": "^3.2.4",
     "babel-core": "^6.4.5",
     "babel-eslint": "^4.1.6",
     "babel-loader": "^6.2.0",
@@ -31,6 +45,7 @@
     "babel-register": "^6.4.3",
     "chai": "^3.4.1",
     "del": "^2.2.0",
+    "eslint": "^8.57.1",
     "glob": "^6.0.3",
     "gulp": "^3.9.0",
     "gulp-babel": "^6.1.1",
@@ -47,11 +62,15 @@
     "gulp-uglify": "^1.5.1",
     "gulp-util": "^3.0.7",
     "isparta": "^4.0.0",
+    "jsdom": "^26.1.0",
     "json-loader": "^0.5.3",
     "mocha": "^2.3.4",
     "sinon": "^1.17.2",
     "sinon-chai": "^2.8.0",
+    "tsdown": "^0.13.2",
+    "typescript": "^5.9.2",
     "vinyl-source-stream": "^1.1.0",
+    "vitest": "^3.2.4",
     "webpack": "^1.12.9",
     "webpack-stream": "^3.1.0"
   },
